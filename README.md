@@ -1,5 +1,23 @@
 # Cringify
 
-- Annoy the f\*ck outta your friends.
+Annoy your friends with the cringified text
 
-Made with ❤ and rust.
+## USAGE:
+
+    `cringify [OPTIONS]`
+
+## FLAGS:
+
+    ```
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+    ```
+
+## OPTIONS:
+
+    ```
+    -p, --prefix <prefix>    Prefix value for the string
+    -s, --string <string>    The main string to be cringified
+    ```
+
+Made with ❤ and rust btw.
