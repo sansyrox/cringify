@@ -2,9 +2,27 @@
 
 Annoy your friends with the cringified text
 
+## INSTALLATION
+
+```
+    cargo install cringify
+```
+
 ## USAGE:
 
     cringify [OPTIONS]
+
+## EXAMPLE
+
+```
+    cringify --string 'Rust is for hippies' --prefix 'Java boomer said: '
+```
+
+Output
+
+```
+    Java boomer said:  rUsT Is fOr hIpPiEs
+```
 
 ## FLAGS:
 

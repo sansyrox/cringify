@@ -49,10 +49,9 @@ fn main() {
     let main_string = matches.value_of("string").unwrap_or("");
 
     if main_string=="" {
-        println!("Please enter a valid string");
+        println!("Please enter a valid string.");
         return
     }
-    println!("The main string is: {}", main_string);
 
     let prefix_string = matches.value_of("prefix").unwrap_or("");
 
