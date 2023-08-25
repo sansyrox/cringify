@@ -1,35 +1,24 @@
-use clap::{Arg, App};
+use clap::Parser;
 use cringify::cringify;
 
+/// Search for a pattern in a file and display the lines that contain it.
+#[derive(Parser)]
+#[command(author= "Sanskar Jethi <sansyrox@gmail.com>", version="0.0.1", about="Annoy your friends with cringified text", long_about = None)]
+struct Cli {
+    /// The pattern to look for
+    string: String,
+    /// The path to the file to read
+    #[arg(default_value = "")]
+    prefix: String,
+}
+
 fn main() {
-    let matches = App::new("Cringify")
-        .version("0.1.0")
-        .author("Sanskar Jethi <sansyrox@gmail.com>")
-        .about("Annoy your friends with the cringified text")
-        .arg(Arg::new("string")
-                 .short('s')
-                 .long("string")
-                 .takes_value(true)
-                 .about("The main string to be cringified"))
-        .arg(Arg::new("prefix")
-                 .short('p')
-                 .long("prefix")
-                 .takes_value(true)
-                 .about("Prefix value for the string"))
-        .get_matches();
+    let args = Cli::parse();
 
-    let main_string = matches.value_of("string").unwrap_or("");
-
-    if main_string=="" {
+    if args.string == "" {
         println!("Please enter a valid string.");
-        return
+        return;
     }
 
-    let prefix_string = matches.value_of("prefix").unwrap_or("");
-
-
-    println!("{}", cringify(&main_string, &prefix_string));
-
-
-
+    println!("{}", cringify(args.string.as_str(), args.prefix.as_str()));
 }

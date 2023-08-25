@@ -13,8 +13,8 @@ name = "cringify"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies.pyo3]
-version = "0.13.2"
+version = "0.19"
 features = ["extension-module"]
 
 [dependencies]
-clap = "3.0.0-beta.2"
+clap = { version = "4.0", features = ["derive"] }
