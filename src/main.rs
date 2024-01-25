@@ -1,14 +1,14 @@
 use clap::Parser;
 use cringify::cringify;
 
-/// Search for a pattern in a file and display the lines that contain it.
+/// The cringify command
 #[derive(Parser)]
 #[command(author= "Sanskar Jethi <sansyrox@gmail.com>", version="0.0.1", about="Annoy your friends with cringified text", long_about = None)]
 struct Cli {
-    /// The pattern to look for
+    /// The string to cringify
     string: String,
-    /// The path to the file to read
-    #[arg(default_value = "")]
+    /// The prefix you want your result to start with
+    #[arg(short = 'p', default_value = "")]
     prefix: String,
 }
 
