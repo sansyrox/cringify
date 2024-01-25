@@ -10,12 +10,12 @@ Annoy your friends with the cringified text
 
 ## USAGE:
 
-    cringify [OPTIONS]
+    cringify <STRING> [OPTIONS]
 
 ## EXAMPLE
 
 ```
-    cringify --string 'Rust is for hippies' --prefix 'Java boomer said: '
+    cringify 'Rust is for hippies' --prefix 'Java boomer said: '
 ```
 
 Output
@@ -32,6 +32,5 @@ Output
 ## OPTIONS:
 
     -p, --prefix <prefix>    Prefix value for the string
-    -s, --string <string>    The main string to be cringified
 
 Made with ❤ and rust btw.
